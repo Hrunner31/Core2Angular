@@ -1,20 +1,29 @@
-﻿var x = 0;
-var s = "";
+﻿$(document).ready(function () {
+    var x = 0;
+    var s = "";
 
-console.log("Hola Pluralsight");
+    console.log("Hola Pluralsight");
 
-var theForm = document.getElementById("form");
-theForm.hidden = true;
 
-var button = document.getElementById("buyButton");
-button.addEventListener("click", function () {
-    if (theForm.hidden == true) {
-        theForm.hidden = false;
-    }
-    else {
-        theForm.hidden = true;
-    }
-});
 
-var informacionProducto = document.getElementsByClassName("informacion-producto");
-var listItems = informacionProducto.item[0].children;
+    var theForm = $("#form");
+    theForm.hide();
+
+    var button = $("#buyButton");
+    button.on("click", function () {
+        console.log("Comprando Item");
+    });
+
+    var informacionProducto = $(".propiedades-producto li");
+    informacionProducto.on("click", function () {
+        console.log("Seleccionaste " + $(this).text());
+    });
+
+    var $loginToggle = $("#loginToggle");
+    var $popupForm = $(".popup-form");
+
+    $loginToggle.on("click", function () {
+        $popupForm.fadeToggle(1000);
+    });
+})
+

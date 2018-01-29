@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <title></title>
     <link href="css/Site.css" rel="stylesheet" />
-    
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="js/Index.js"></script>
 </head>
 <body>
     <h2>Dutch Treat</h2>
@@ -20,6 +21,7 @@
         </ul>
         <button id="buyButton">Comprar</button>
     </div>
+
     <div id="form">
         <form>
             <label>Nombre:</label>
@@ -41,6 +43,28 @@
             <input type="submit" value="Send Message" />
         </form>
     </div>
-    <script src="js/Index.js"></script>
+
+    <div>
+        <div id="loginToggle">Login</div>
+        <form class="popup-form">
+            <div>
+                <label>Usuario</label>
+                <input type="text"/>
+            </div>
+            <div>
+                <label>Contraseña</label>
+                <input type="password" />
+            </div>
+            <div>
+                <input type="checkbox" />
+                <label>¿Recuerdame?</label>
+            </div>
+            <div>
+                <input type="submit" value="Login" />
+            </div>
+        </form>
+    </div>
+
+    
 </body>
 </html>
